@@ -16,8 +16,12 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+ 
 h1,
 h2,
 h3,
@@ -37,14 +41,6 @@ ol {
   list-style: none;
 }
 
-.page {
-max-width: 1200px;
-max-height: 800px;
-display: flex;
-justify-content: center;
-align-items: center
-/* padding: 133px 30px; */
-}
 
 .content {
 
@@ -53,6 +49,7 @@ align-items: center
   gap: 30px;
   max-width: 1140px;
   max-height: 534px;
+
   /* ???*/
   /* margin-left: auto;
   margin-right: auto;

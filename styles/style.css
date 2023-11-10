@@ -21,7 +21,6 @@ html {
   align-items: center;
 }
 
- 
 h1,
 h2,
 h3,
@@ -41,7 +40,6 @@ ol {
   list-style: none;
 }
 
-
 .content {
 
   display: flex;
@@ -49,13 +47,7 @@ ol {
   gap: 30px;
   max-width: 1140px;
   max-height: 534px;
-
-  /* ???*/
-  /* margin-left: auto;
-  margin-right: auto;
-  margin-top: 133px; */
 }
-
 
 .visually-hidden {
   position: absolute;
@@ -66,10 +58,6 @@ ol {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-
-
-
 
 .title {
   color: #FFF;
@@ -91,7 +79,21 @@ ol {
   flex-direction: column;
   width: 711px;
   gap: 16px;
-  /* position: relative; */
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  position: relative;
+  object-fit: contain;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
 }
 
 .search-form {
@@ -99,9 +101,6 @@ ol {
   justify-content: space-between;
   align-items: flex-end;
 }
-
-
-
 
 .search-form__fieldset-title {
   color: #FFF;
@@ -120,17 +119,15 @@ ol {
   font-weight: 400;
   line-height: normal;
   width: 225px;
-
+  /* width: fit-content; */
   cursor: pointer;
   background-color: transparent;
   border: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
-
   margin-top: 5px;
   appearance: none;
 }
-
 
 fieldset {
   border: none;
@@ -139,9 +136,7 @@ fieldset {
 input {
   font-family: inherit;
   color: inherit;
-  /* Теперь поле ввода наследует шрифт и цвет текста от родителя */
 }
-
 
 .search-form__fieldset {
   display: flex;
@@ -149,11 +144,8 @@ input {
   align-items: flex-start;
 }
 
-
 .search-form__label {
   width: fit-content;
-  position: relative;
-  /*точно ли тут? может у дочерних эелементов нужно?*/
 }
 
 input[type="text"]:focus {
@@ -163,9 +155,6 @@ input[type="text"]:focus {
 input[type="text"]:focus-visible {
   border: 1px solid #FFF;
 }
-
-
-
 
 .search-form-label-text {
   color: #FFF;
@@ -207,7 +196,6 @@ label:has(input[type="text"]:focus-visible) {
   border: 1px solid #fff;
 }
 
-
 input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
   content: "";
   display: inline-block;
@@ -215,8 +203,7 @@ input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
   height: 15px;
   background-color: #fff;
   margin: 1px;
-  }
-
+}
 
 label:has(input[type="checkbox"]:focus-visible) {
   border: 1px solid #fff;
@@ -264,13 +251,8 @@ button:active {
 }
 
 .content__details {
-
-  /* Растянуть .content__details во всю доступную ширину и высоту контейнера
-   и добавить отступы между заголовком и зоной с карточками. */
-
   display: flex;
   flex-grow: 1;
-  /* нужно ли. это к коменту выше*/
   flex-direction: column;
   gap: 26px;
   max-width: 399px;
@@ -314,23 +296,6 @@ button:active {
   /* 90% */
 }
 
-
-.result__video-container {
-  /* Замостить видео   в этот контейнер так, чтобы оно занимало всю ширину и высоту и не выходило за пределы. ??*/
-  width: 711px;
-  height: 386px;
-  position: relative;
-}
-
-.result__video {
-  /* object-fit: contain;  */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-
-}
-
 .content__video-card {
   display: flex;
   align-items: flex-start;
@@ -339,12 +304,13 @@ button:active {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  /*и замостить в них изображение - что это значит? */
+  object-fit: cover;
 }
 
 .content__video-card-description-container {
-  /*Сделать так, чтобы  занимал всё доступное пространство, не занятое картинкой. */
   flex-grow: 1;
+  max-width: 200px;
+  word-wrap: break-word;
 }
 
 .more-button {
@@ -373,7 +339,6 @@ button:active {
   display: block;
 }
 
-
 .content__card-link_current:active {
   background-color: #545050;
 }
@@ -381,7 +346,6 @@ button:active {
 .content__card-link:active {
   background-color: #545050;
 }
-
 
 .content__card-link:focus {
   outline: none;

@@ -37,17 +37,26 @@ ol {
   list-style: none;
 }
 
+.page {
+max-width: 1200px;
+max-height: 800px;
+display: flex;
+justify-content: center;
+align-items: center
+/* padding: 133px 30px; */
+}
+
 .content {
+
   display: flex;
   align-items: flex-end;
   gap: 30px;
   max-width: 1140px;
   max-height: 534px;
   /* ???*/
-
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
-  margin-top: 133px;
+  margin-top: 133px; */
 }
 
 
@@ -170,16 +179,6 @@ input[type="text"]:focus-visible {
   line-height: normal;
 }
 
-
-/* .search-form__checkbox {
-  width: 19px;
-  height: 19px;
-  display: inline-block;
-  position: relative;
-  border: 1px solid #adb5bd;
-  
-} */
-
 .search-form__checkbox-list {
   cursor: pointer;
   display: flex;
@@ -207,16 +206,6 @@ input[type="text"]:focus-visible {
   line-height: normal;
 }
 
-
-
-/*input[type="checkbox"]:disabled {}  выключённый */
-
-/*input[type="checkbox"]:checked + span {
-  background-color: #FFF;
-}  выбранный */
-
-
-
 label:has(input[type="text"]:focus-visible) {
   border: 1px solid #fff;
 }
@@ -231,11 +220,6 @@ input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
   margin: 1px;
   }
 
-
-
-/* input[type="checkbox"]:focus-visible + span {
-border: 3px solid white;
-}   */
 
 label:has(input[type="checkbox"]:focus-visible) {
   border: 1px solid #fff;
@@ -260,16 +244,6 @@ button:hover {
 button:active {
   background-color: #545050;
 }
-
-/*  СДЕЛАТЬ ОБВОДКУ ДЛЯ КНОПКИ ПРИ ФОКУСЕ????
-button:focus-visible + button::before {
-  content: "";
-  position: absolute;
-  width: 198px;
-  height: 38px;
-  background-color: transparent;
-  border: 1px solid #FFF;
-} */
 
 .search-form__submit-button {
   cursor: pointer;
@@ -308,6 +282,7 @@ button:focus-visible + button::before {
 
 .content__list {
   max-height: 298px;
+  max-width: 399px;
   display: flex;
   flex-direction: column;
   gap: 30px;

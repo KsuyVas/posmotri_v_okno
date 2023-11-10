@@ -36,3 +36,391 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  max-width: 1140px;
+  max-height: 534px;
+  /* ???*/
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 133px;
+}
+
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+
+
+
+
+.title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 711px;
+  gap: 16px;
+  /* position: relative; */
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+
+
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 225px;
+
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+
+  margin-top: 5px;
+  appearance: none;
+}
+
+
+fieldset {
+  border: none;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
+  /* Теперь поле ввода наследует шрифт и цвет текста от родителя */
+}
+
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.search-form__label {
+  width: fit-content;
+  position: relative;
+  /*точно ли тут? может у дочерних эелементов нужно?*/
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="text"]:focus-visible {
+  border: 1px solid #FFF;
+}
+
+
+
+
+.search-form-label-text {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+/* .search-form__checkbox {
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #adb5bd;
+  
+} */
+
+.search-form__checkbox-list {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  /* width: 225px; */
+  margin-top: 6px;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.search-form-label-text {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+/*input[type="checkbox"]:disabled {}  выключённый */
+
+/*input[type="checkbox"]:checked + span {
+  background-color: #FFF;
+}  выбранный */
+
+
+
+label:has(input[type="text"]:focus-visible) {
+  border: 1px solid #fff;
+}
+
+
+input[type="checkbox"]:checked+.search-form__pseudo-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+
+
+/* input[type="checkbox"]:focus-visible + span {
+border: 3px solid white;
+}   */
+
+label:has(input[type="checkbox"]:focus-visible) {
+  border: 1px solid #fff;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px double #fff;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+button:active {
+  background-color: #545050;
+}
+
+/*  СДЕЛАТЬ ОБВОДКУ ДЛЯ КНОПКИ ПРИ ФОКУСЕ????
+button:focus-visible + button::before {
+  content: "";
+  position: absolute;
+  width: 198px;
+  height: 38px;
+  background-color: transparent;
+  border: 1px solid #FFF;
+} */
+
+.search-form__submit-button {
+  cursor: pointer;
+  display: flex;
+  width: 194px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid #FFF;
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.content__details {
+
+  /* Растянуть .content__details во всю доступную ширину и высоту контейнера
+   и добавить отступы между заголовком и зоной с карточками. */
+
+  display: flex;
+  flex-grow: 1;
+  /* нужно ли. это к коменту выше*/
+  flex-direction: column;
+  gap: 26px;
+  max-width: 399px;
+  justify-content: space-between;
+}
+
+.content__list {
+  max-height: 298px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: scroll;
+  position: relative;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  /* 30px */
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px;
+  /* 90% */
+}
+
+
+.result__video-container {
+  /* Замостить видео   в этот контейнер так, чтобы оно занимало всю ширину и высоту и не выходило за пределы. ??*/
+  width: 711px;
+  height: 386px;
+  position: relative;
+}
+
+.result__video {
+  /* object-fit: contain;  */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.content__video-card {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  /*и замостить в них изображение - что это значит? */
+}
+
+.content__video-card-description-container {
+  /*Сделать так, чтобы  занимал всё доступное пространство, не занятое картинкой. */
+  flex-grow: 1;
+}
+
+.more-button {
+  cursor: pointer;
+  display: flex;
+  width: 399px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid #FFF;
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.content__card-link {
+  margin: 2px;
+  display: block;
+}
+
+
+.content__card-link_current:active {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
